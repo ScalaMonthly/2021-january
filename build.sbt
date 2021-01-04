@@ -1,4 +1,4 @@
-name := "january-2021"
+name := "2021-january"
 
 version := "0.1"
 
