@@ -28,7 +28,7 @@ object fundamentals {
       * Example input: 1
       * Example output: Binary.One
       */
-    val one: Parser[Binary] = ???
+    val one: Parser[Binary] = fail
 
     final case class LetterAndNumber(value: String) extends AnyVal
     /**
@@ -40,7 +40,7 @@ object fundamentals {
       * 
       * Hint: Look inside of `cats.parse.Rfc5234` for help with parsing numbers and letters.
       */
-    val two: Parser[LetterAndNumber] = ???
+    val two: Parser[LetterAndNumber] = fail
 
     final case class BinaryList(value: NonEmptyList[Binary]) extends AnyVal
     /**
@@ -51,7 +51,7 @@ object fundamentals {
       * Example input: 1001
       * Example output: BinaryList(NonEmptyList.of(Binary.One, Binary.Zero, Binary.Zero, Binary.One))
       */
-    val three: Parser[BinaryList] = ???
+    val three: Parser[BinaryList] = fail
 
     final case class Name(value: String) extends AnyVal
     /**
@@ -62,7 +62,7 @@ object fundamentals {
       * Valid example input: Brian O'Brien III
       * Example output: Name("Brian O'Brien III")
       */
-    val four: Parser[Name] = ???
+    val four: Parser[Name] = fail
 
     final case class Score(left: Int, right: Int)
     /**
@@ -72,7 +72,7 @@ object fundamentals {
       * Example input: 123 - 456
       * Example output: Score(123, 456)
       */
-    val five: Parser[Score] = ???
+    val five: Parser[Score] = fail
 
     sealed abstract class MyTuple extends Product with Serializable
     object MyTuple {
@@ -90,7 +90,7 @@ object fundamentals {
       * Example input 2: one,2,three
       * Example output 2: MyTuple.Three("one", "2", "three")
       */
-    val six: Parser[MyTuple] = ???
+    val six: Parser[MyTuple] = fail
 
     final case class UserName(value: String) extends AnyVal
     /**
@@ -100,7 +100,7 @@ object fundamentals {
       * Example input: jess.day.one
       * Example output: UserName("jess.day.one")
       */
-    val seven: Parser[UserName] = ???
+    val seven: Parser[UserName] = fail
 
     /**
       * Construct a parser that will return successfully for any input that is composed entirely of `allowedChars`.
@@ -114,7 +114,7 @@ object fundamentals {
       * @param allowedChars chars that are to be allowed inside of this string
       * @return a parser returning a string when the input is valid
       */
-    def eight(allowedChars: List[Char]): Parser[String] = ???
+    def eight(allowedChars: List[Char]): Parser[String] = fail
 
     final case class CarType(make: String, model: Option[String])
 
@@ -126,6 +126,6 @@ object fundamentals {
       * Example input: Nissan Versa
       * Example output: CarType("Nissan", Some("Versa"))
       */
-    val nine: Parser[CarType] = ???
+    val nine: Parser[CarType] = fail
 
 }
